@@ -8,6 +8,16 @@ For this project, we are going to use model rocket engines to propel our rocket.
 ## Challenges:
 We will need to learn how to use the router that we have to connect the two pis together and stream video from one to another. This is going to be rather challenging because we have never studied this before. 
 It is also going to be challenging to find a way to efficiently make disposable rocket stages without high cost for each launch. We will need to figure out how to use cheap materials for our disposable stages.
+## Weekly Planning:
+Feb 1-8: Finish CAD and get model printed, begin work on rocket software engineering.
+Feb 9-15: Begin attempts to use wifi router to communicate with pi at extreme distances, if this fails, begin brainstorming an RC solution.
+Feb 16-23: Finish rocket staging python software.
+Feb 24- Mar 1: Finish camera software (with wifi video streaming to home base).
+Mar 2-8: Finish internal rocket software, begin preperation for launch and control software.
+Mar 9-15: Finish control software and figure out launch.
+Mar 16-23: Prepare for testing.
+Mar 23-31: Finish testing/repairs.
+April 1: Final launch (conveniently April fools day.)
 
 # Design and Manufacturing
 ## CAD
