@@ -55,4 +55,7 @@ Our plan is to have Azreal's (the rocket's) descent remotely controlled with a p
 
 # Design and Manufacturing
 ## CAD
+!(ISO EXPLODE)[https://github.com/msweet53/Project-Azrael/blob/main/Images/AsraelISOexploded.png]
+!(ISO)[https://github.com/msweet53/Project-Azrael/blob/main/Images/AzraelISO.png]
+!(Azrael)[https://github.com/msweet53/Project-Azrael/blob/main/Images/Azrael1.png]
 Here you can find the full assembly for our rocket in OnShape: https://cvilleschools.onshape.com/documents/2a45bfd6e5696b3383110766/w/5fe0dde40c637c081121e03b/e/437919c00aa1a2b2d322f726?renderMode=0&uiState=61f2cd65e31cce2007406903
