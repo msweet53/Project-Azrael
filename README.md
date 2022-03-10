@@ -61,3 +61,8 @@ We are going to make a station that holds the rocket in place so we can test the
 ![ISO](https://github.com/msweet53/Project-Azrael/blob/main/Images/AzraelISO.png)
 ![Azrael](https://github.com/msweet53/Project-Azrael/blob/main/Images/Azrael1.png)
 Here you can find the full assembly for our rocket in OnShape: https://cvilleschools.onshape.com/documents/2a45bfd6e5696b3383110766/w/5fe0dde40c637c081121e03b/e/437919c00aa1a2b2d322f726?renderMode=0&uiState=61f2cd65e31cce2007406903
+
+## Figured out Streaming over Wifi (Mar. 10)
+Despite behing behind schedule, we have figured out how to stream video from our small pi, to our large pi using the pi camera and VLC. This stream has a lot of delay and buffer freezing, so we have decided that we will not be using this as reliable data when steering our rocket back to home. 
+The command we run on the rockets pi is: raspivid -o - -t 0 -n -w 320 -h 200 -fps 24 | cvlc -vvv stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8090}' :demux=h264
+and we use vlc on the large pi to directly connect to the stream with the proper ip and port.
