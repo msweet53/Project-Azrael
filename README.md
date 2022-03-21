@@ -70,5 +70,7 @@ and we use vlc on the large pi to directly connect to the stream with the proper
 ## Figured out running the client VLC script in the background with python. (Mar. 16)
 We have succesfuly figured out how to run the client side VLC command in the background using a python file. We have this running on startup using services right now. 
 We used this python script to be able to run our bash command:
+
 import os
+
 os.system("raspivid -o - -t 0 -n -w 320 -h 200 -fps 24 | cvlc -vvv stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8090}' :demux=h264")
