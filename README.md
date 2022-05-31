@@ -49,6 +49,8 @@ Material for parachute
 C6-5 Model rocket engines and fuses
 
 Access to 3d printer, lazer cutter, and necessary materials (acyrilic, ABS filament)
+
+A base to launch the rocket from
 ## Hardware Communications
 Our plan is to have Azreal's (the rocket's) descent remotely controlled with a parachute by another Pi that we are calling "home base". Home base and Azrael (home base being the controller, and azrael being the rocket) will communicate through a WiFi router. Home base will receive video transmission from Azrael, and Azrael will receive remote control commands from Home Base. Home base will also be able to send commands to take pictures that will be saved to Azraels SD card. Azreal will send a notification to home base when it reaches the apex of its flight, in case it is not visible in the video stream. 
 
