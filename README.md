@@ -32,11 +32,9 @@ April 1: Final launch (conveniently April fools day.)
 
 Raspberry Pi Screen
 
-Control Joysticks
-
 WiFi router
 
-Battery for rocket fuses and relay
+Batteries for rocket fuses and relay
 
 Accelerometer
 
@@ -46,7 +44,7 @@ Pi Camera
 
 Material for parachute
 
-C6-5 Model rocket engines and fuses
+D Model rocket engines and fuses
 
 Access to 3d printer, lazer cutter, and necessary materials (acyrilic, ABS filament)
 
