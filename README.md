@@ -32,9 +32,11 @@ April 1: Final launch (conveniently April fools day.)
 
 Raspberry Pi Screen
 
+Control Joysticks
+
 WiFi router
 
-Batteries for rocket fuses and relay
+Battery for rocket fuses and relay
 
 Accelerometer
 
@@ -44,7 +46,7 @@ Pi Camera
 
 Material for parachute
 
-D Model rocket engines and fuses
+C6-5 Model rocket engines and fuses
 
 Access to 3d printer, lazer cutter, and necessary materials (acyrilic, ABS filament)
 
@@ -53,23 +55,15 @@ A base to launch the rocket from
 Our plan is to have Azreal's (the rocket's) descent remotely controlled with a parachute by another Pi that we are calling "home base". Home base and Azrael (home base being the controller, and azrael being the rocket) will communicate through a WiFi router. Home base will receive video transmission from Azrael, and Azrael will receive remote control commands from Home Base. Home base will also be able to send commands to take pictures that will be saved to Azraels SD card. Azreal will send a notification to home base when it reaches the apex of its flight, in case it is not visible in the video stream. 
 
 ## Risk Mitigation
-We are going to make a station that holds the rocket in place so we can test the rocket's features without launching it into the sky. We will be able to see if the top and bottom of the rocket detatch properly and the tube that keeps gas from getting to the raspberry pi works.
+We are going to make a station that holds the rocket in place so we can test the rocket's features without launching it into the sky. We will be able to see if the top and bottom of the rocket detatch properly and the tube that keeps gas from getting to the raspberry pi works. We will also be doing a test launch to make sure that nothing will go wrong when the electronics are on. We will launch the rocket in a large open field so it cant do any damage if something goes wrong.
 
 # Design and Manufacturing
 ## CAD
-![ISO](https://github.com/msweet53/Project-Azrael/blob/main/Images/Screenshot%202022-05-31%20095623.png)
-![Azrael](https://github.com/msweet53/Project-Azrael/blob/main/Images/Screenshot%202022-05-31%20095653.png)
+![ISO EXPLODE](https://github.com/msweet53/Project-Azrael/blob/main/Images/AsraelISOexploded.png)
+![ISO](https://github.com/msweet53/Project-Azrael/blob/main/Images/AzraelISO.png)
+![Azrael](https://github.com/msweet53/Project-Azrael/blob/main/Images/Azrael1.png)
 Here you can find the full assembly for our rocket in OnShape: https://cvilleschools.onshape.com/documents/2a45bfd6e5696b3383110766/w/5fe0dde40c637c081121e03b/e/437919c00aa1a2b2d322f726?renderMode=0&uiState=61f2cd65e31cce2007406903
 
-## Code
-We are using two Python scripts to control our rocket while it is on the ground and in the air. Both of these Python scripts are innitiated on boot with services. The purpose of the boot stream python script is to start the video streaming on boot. The purpose of the launch code script is to start the staging sequence that is controlled by an altimeter.
-The scripts can be found here:
-
-launchcode.py: https://github.com/msweet53/Project-Azrael/blob/main/launchcode.py
-
-bootstream.py: https://github.com/msweet53/Project-Azrael/blob/main/bootstream.py
-
-# Journal
 ## Figured out Streaming over Wifi (Mar. 10)
 Despite behing behind schedule, we have figured out how to stream video from our small pi, to our large pi using the pi camera and VLC. This stream has a lot of delay and buffer freezing, so we have decided that we will not be using this as reliable data when steering our rocket back to home. 
 The command we run on the rockets pi is: raspivid -o - -t 0 -n -w 320 -h 200 -fps 24 | cvlc -vvv stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8090}' :demux=h264
@@ -82,3 +76,7 @@ We used this python script to be able to run our bash command:
 import os
 
 os.system("raspivid -o - -t 0 -n -w 320 -h 200 -fps 24 | cvlc -vvv stream:///dev/stdin --sout '#standard{access=http,mux=ts,dst=:8090}' :demux=h264")
+
+## Figuring out a place to launch our rocket.
+
+We decide that the best place to launch our rocket would be a large open field so that no property or nature is damaged in the process of launching our rocket. We have also gotten permission from the pacs and rec of albermarle county to launch at darden towe soccerfields, where theres more than enough space to safely launch our rocket. 
